@@ -41,5 +41,12 @@ for i in $(seq 1 $1); do
     PAIR_1="$(randomizer)"
     PAIR_2="$(complement $PAIR_1)"
 
-    printf "%s —— %s\n" "$PAIR_1" "$PAIR_2"
+    case $2 in
+        "ascii")
+            printf "%s —— %s\n" "$PAIR_1" "$PAIR_2"
+            ;;
+        "ascii-improved")
+            printf "(%s (     ) %s)\n \`-.\`. ,',-'\n    _,-'\"\n ,-',' \`.\`-.\n" "$PAIR_1" "$PAIR_2"
+            ;;
+    esac
 done
