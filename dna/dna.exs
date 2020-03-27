@@ -22,8 +22,7 @@ defmodule DNA do
   def generate_chain(repetition) do
     Enum.map(1..repetition, fn _ ->
       base = DNA.randomizer()
-      base_complement = base |> DNA.complement()
-      IO.puts("#{base} —— #{base_complement}")
+      IO.write("(#{base} (     ) #{base_complement})\n `-.`. ,',-'\n    _,-'\"\n ,-',' `.`-.\n")
     end)
   end
 end
